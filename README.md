@@ -102,8 +102,10 @@ Settings->Action->I understand...
 
 回到项目主页，修改README.md随便加几个空格即可触发Actions，设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
-# 代码参考及详细教程
+# 友情链接
 https://github.com/ReaJason/17wanxiaoCheckin-Actions
 
-https://github.com/YooKing/HAUT_autoCheck/blob/master/main.py
+https://github.com/YooKing/HAUT_autoCheck
+
+https://github.com/LovelyWhite/Haut-AutoCheckin
 
