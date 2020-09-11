@@ -5,7 +5,7 @@ import random
 import datetime
 
 # sectets字段录入
-deptId = eval(input())
+deptId = input()
 deptText = input()
 areaStr = input()
 stuNo = input()
@@ -28,7 +28,7 @@ else:
     print("现在是%d点%d分，打卡时间将自动打卡" %(now,time.localtime().tm_min))
     exit(0)
 
-# 随机温度(36.2~36.8)
+# 随机温度(36.2~36.4)
 a = random.uniform(36.2, 36.4)
 temperature = round(a, 1)
 
