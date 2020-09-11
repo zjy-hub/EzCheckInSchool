@@ -25,7 +25,6 @@ else:
     templateid = "clockSign3"
     customerAppTypeRuleId = 148
     print("现在是%d点%d分，将打卡晚间档测试" %(now,time.localtime().tm_min))
-    exit(0)
 
 # 随机温度(36.2~36.4)
 a = random.uniform(36.2, 36.4)
