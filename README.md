@@ -51,7 +51,11 @@ https://www.cnblogs.com/wenbodeboke/p/9770771.html
 
 在Settings添加以下Secert字段
 
-AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，填写{ }及中间的部分
+AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
+
+```
+{"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
+```
 
 DEPTID //抓包JSON中的"deptid"
 
