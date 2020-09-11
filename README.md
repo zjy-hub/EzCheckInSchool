@@ -12,21 +12,23 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 
 ![https设置](./img/https.png)
 
-![connections设置](./img/connections.png)
+![connections设置](./img/connections.png =20x)
 
 ![fliters设置](./img/fliters.png)
 
 设置完fliters后点击右侧Actions->Run Fliterset now
 
 然后打开手机，连接到电脑同一Wifi下设置代理
+
 ![代理设置](./img/setproxy.png)
 
 此处的主机名可鼠标悬浮于Fiddler右上角Online图标查看
+
 ![代理地址](./img/localip.png)
 
 设置好代理后，使用手机浏览器打开上图中主机名+端口号，本例为192.168.1.100:8888（如果无法访问请把360之类的关掉）
 
-![fiddler证书](./img/fiddlercert.jpg)
+![fiddler证书](./img/fiddlercert.png)
 
 点击FiddlerRoot certificate下载证书，下载完成后点击安装。
 
@@ -99,3 +101,4 @@ Settings->Action->I understand...
 https://github.com/ReaJason/17wanxiaoCheckin-Actions
 
 https://github.com/YooKing/HAUT_autoCheck/blob/master/main.py
+
