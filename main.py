@@ -7,7 +7,6 @@ import datetime
 # sectets字段录入
 deptId = input()
 deptText = input()
-areaStr = input()
 stuNo = input()
 username = input()
 userid = input()
