@@ -69,15 +69,17 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 	"token": "TOKEN字段"
 }
 ```
-接下来你需要把上面获取到的信息以此设为Secert
-
-在Settings添加以下Secert字段
+注意：本项目默认AERASTR为河南工业大学，其他学校请自行修改。
 
 AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
 
 ```
 {"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
 ```
+
+接下来你需要把上面获取到的JSON依次设为Secert
+
+在Settings添加以下Secert字段
 
 DEPTID //抓包JSON中的"deptid"
 
