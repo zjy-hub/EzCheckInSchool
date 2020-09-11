@@ -13,18 +13,17 @@ userid = input()
 sckey = input()
 
 # 时间判断
+templateid = "clockSign1"
+customerAppTypeRuleId = 146
 now = (time.localtime().tm_hour + 8) % 24
-if (now >= 6) & (now < 8):
-    templateid = "clockSign1"
-    customerAppTypeRuleId = 146
-    print("现在是%d点%d分，将打卡早间档测试" %(now,time.localtime().tm_min))
-elif (now >= 12) & (now < 18):
+if (now >= 12) & (now <= 14):
     templateid = "clockSign2"
     customerAppTypeRuleId = 147
-else:
+elif (now >= 21 ) & (now <= 22):
     templateid = "clockSign3"
     customerAppTypeRuleId = 148
-
+else
+    print("现在是%d点%d分，将打卡早间档测试" %(now,time.localtime().tm_min))
 
 # 随机温度(36.2~36.4)
 a = random.uniform(36.2, 36.4)
