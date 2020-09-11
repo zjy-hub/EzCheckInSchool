@@ -22,7 +22,7 @@ if (now >= 12) & (now <= 14):
 elif (now >= 21 ) & (now <= 22):
     templateid = "clockSign3"
     customerAppTypeRuleId = 148
-else
+else:
     print("现在是%d点%d分，将打卡早间档测试" %(now,time.localtime().tm_min))
 
 # 随机温度(36.2~36.4)
