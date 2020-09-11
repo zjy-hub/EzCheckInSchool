@@ -6,11 +6,31 @@
 
 接下来抓包完美校园打卡内容，本文使用Fiddler代理手机抓包
 
-fiddler没有手机客户端，都是安装在PC上，要实现对手机上的程序抓包，则需要对PC上的fiddler和手机端做一些配置。步骤如下：
+fiddler没有手机客户端，都是安装在PC上，要实现对手机上的程序抓包，则需要对PC上的fiddler和手机端做一些配置。
 
-https://www.cnblogs.com/wenbodeboke/p/9770771.html
+首先对PC端fiddler配置如下图：
 
-设置好手机代理后，打开完美校园开始健康打卡（最好在指定的打卡时间打卡方便抓包），目标数据包为POST到`https://reportedh5.17wanxiao.com/sass/api/epmpics`的JSON
+![https设置](./img/https.png)
+
+![connections设置](./img/connections.png)
+
+![fliters设置](./img/fliters.png)
+
+设置完fliters后点击右侧Actions->Run Fliterset now
+
+然后打开手机，连接到电脑同一Wifi下设置代理
+![代理设置](./img/setproxy.png)
+
+此处的主机名可鼠标悬浮于Fiddler右上角Online图标查看
+![代理地址](./img/localip.png)
+
+设置好代理后，使用手机浏览器打开上图中主机名+端口号，本例为192.168.1.100:8888（如果无法访问请把360之类的关掉）
+
+![fiddler证书](./img/fiddlercert.jpg)
+
+点击FiddlerRoot certificate下载证书，下载完成后点击安装。
+
+之后打开完美校园开始健康打卡（最好在指定的打卡时间打卡方便抓包，由于证书的原因，如果不显示打卡界面需要多尝试打开几次），目标数据包为POST到`https://reportedh5.17wanxiao.com/sass/api/epmpics`的JSON
 格式如下：
 
 ```
@@ -67,13 +87,13 @@ USERID //抓包JSON中的"userid"
 
 USERNAME //抓包JSON中的"username"
 
-SCKEY //Server酱调用URL
+SCKEY //Server酱调用完整URL，以.send结尾，使用前请注册并绑定[Server酱](http://sc.ftqq.com/)
 
-添加后开启Actions方法 
+以上步骤都完成后开启Actions
 
 Settings->Action->I understand... 
 
-回到项目主页，修改README.md随便加几个空格触发Actions
+回到项目主页，修改README.md随便加几个空格即可触发Actions，设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
 # 代码参考及详细教程
 https://github.com/ReaJason/17wanxiaoCheckin-Actions
