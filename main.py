@@ -75,7 +75,7 @@ for i in range(1,3):
     if response.status_code == 200:
         break
     else:
-        time.sleep(60000)
+        time.sleep(60)
 print(response.text)
 if response.json()["msg"] == '成功':
     msg = cstTime + "打卡成功"
