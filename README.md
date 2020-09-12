@@ -102,7 +102,6 @@ Settings->Action->I understand...
 ```
 
 ## 友情链接
-https://github.com/ReaJason/17wanxiaoCheckin-Actions
 
 https://github.com/YooKing/HAUT_autoCheck
 
