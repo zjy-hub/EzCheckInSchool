@@ -65,12 +65,17 @@ jsons = {
         "clockState": 0
     },
 }
-# 提交打卡
-response = requests.post(sign_url, json=jsons)
-utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
-cstTime = utcTime.strftime("%H时%M分%S秒")
+# 提交打卡与结果判定
+
+
+for i in range(1,3)
+    response = requests.post(sign_url, json=jsons)
+    utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
+    cstTime = utcTime.strftime("%H时%M分%S秒")
+    if response.status_code == 200:
+        break
+
 print(response.text)
-# 结果判定
 if response.json()["msg"] == '成功':
     msg = cstTime + "打卡成功"
 else:
