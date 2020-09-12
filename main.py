@@ -68,13 +68,14 @@ jsons = {
 # 提交打卡与结果判定
 
 
-for i in range(1,3)
+for i in range(1,3):
     response = requests.post(sign_url, json=jsons)
     utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
     cstTime = utcTime.strftime("%H时%M分%S秒")
     if response.status_code == 200:
         break
-
+    else:
+        time.sleep(60000)
 print(response.text)
 if response.json()["msg"] == '成功':
     msg = cstTime + "打卡成功"
