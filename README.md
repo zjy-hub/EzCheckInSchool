@@ -44,44 +44,29 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 
 点击FiddlerRoot certificate下载证书，下载完成后点击安装。
 
-之后打开完美校园开始健康打卡（最好在指定的打卡时间打卡方便抓包，由于证书的原因，如果不显示打卡界面需要多尝试打开几次），目标数据包为POST到`https://reportedh5.17wanxiao.com/sass/api/epmpics`的JSON
+之后打开完美校园->健康打卡（由于证书的原因，如果不显示打卡界面需要多尝试打开几次），目标数据包为POST到`https://reportedh5.17wanxiao.com/api/clock/school/getUserInfo`的JSON
 格式如下：
 
 ```
 {
-	"businessType": "epmpics",
-	"method": "submitUpInfoSchool",
-	"jsonData": {
-		"deptStr": {
-			"deptid": xxxx,
-			"text": "x学院-xx-xxxxxx"
-		},
-		"areaStr": "{\"streetNumber\":\"\",\"street\":\"x街\",\"district\":\"x区\",\"city\":\"x市\",\"province\":\"x省\",\"town\":\"\",\"pois\":\"xxxx\",\"lng\":xxx.,\"lat\":xxx,\"address\":\"x区x街x城\",\"text\":\"x省-x市\",\"code\":\"\"}",
-		"reportdate": xxxxxxxxxx,
-		"customerid": 43,
-		"deptid": xxxx,
-		"source": "app",
-		"templateid": "clockSign3",
-		"stuNo": "学号",
-		"username": "姓名",
-		"userid": 用户ID,
-		"updatainfo": [
-			{
-				"propertyname": "temperature",
-				"value": "36.4"
-			},
-			{
-				"propertyname": "symptom",
-				"value": "无症状"
-			}
-		],
-		"customerAppTypeRuleId": 146,
-		"clockState": 0
+	"result":true,
+	"msg":"成功",
+	"userInfo":{
+		"classDescription":"信息科学与工程学院-计算机科学与技术-计科xxxx",
+		"classId":70376,
+		"collegeId":70332,
+		"customerAppTypeId":180,
+		"customerId":43,
+		"feature":1,
+		"majorId":71854,
+		"stuNo":"201812340101",
+		"userId":9632010,
+		"username":"张三"
 	},
-	"token": "TOKEN字段"
+	"code":0
 }
 ```
-**注意：本项目默认AERASTR为河南工业大学，其他学校请自行修改。**
+**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST https://reportedh5.17wanxiao.com/sass/api/epmpics JSON中的areaStr）修改main.py代码。**
 
 AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
 
@@ -93,17 +78,17 @@ AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
 
 在Settings添加以下Secert字段
 
-DEPTID //抓包JSON中的"deptid"
+DEPTID //抓包JSON中的"classid"，如`70376`
 
-DEPTTEXT //抓包JSON中的"jsonData"的"text"
+DEPTTEXT //抓包JSON中的"classDescription"，如`信息科学与工程学院-计算机科学与技术-计科xxxx班`
 
-STUNO //抓包JSON中的"stuNo"
+STUNO //抓包JSON中的"stuNo"，如`201812340101`
 
-USERID //抓包JSON中的"userid"
+USERID //抓包JSON中的"userid"，如`9632010`
 
-USERNAME //抓包JSON中的"username"
+USERNAME //抓包JSON中的"username"，如`张三`
 
-SCKEY //Server酱调用完整URL，以.send结尾，使用前请注册并绑定[Server酱](http://sc.ftqq.com/)
+SCKEY //Server酱调用完整URL，使用前请注册并绑定[Server酱](http://sc.ftqq.com/)，如` http://sc.ftqq.com/abcdefghigklmnopqrstuvwxyz.send`
 
 以上步骤都完成后开启Actions
 
