@@ -44,7 +44,12 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 
 点击FiddlerRoot certificate下载证书，下载完成后点击安装。
 
-之后打开完美校园->健康打卡（由于证书的原因，如果不显示打卡界面需要多尝试打开几次），目标数据包为POST到`https://reportedh5.17wanxiao.com/api/clock/school/getUserInfo`的JSON
+之后打开完美校园->健康打卡抓包
+
+**由于证书的原因，如果不显示打卡界面需要多尝试打开几次**
+
+目标数据包为POST到`https://reportedh5.17wanxiao.com/api/clock/school/getUserInfo`的JSON
+
 格式如下：
 
 ```
@@ -66,7 +71,7 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 	"code":0
 }
 ```
-**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST https://reportedh5.17wanxiao.com/sass/api/epmpics JSON中的areaStr）修改main.py代码。**
+**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。**
 
 AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
 
