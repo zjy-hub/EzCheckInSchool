@@ -95,7 +95,7 @@ Settings->Action->I understand...
 回到项目主页，修改README.md随便加几个空格即可触发Actions，设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
 
-**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。如**
+**注意：本项目默认定位地址为河南工业大学莲花街校区内，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。如**
 
 ```
 {"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
