@@ -71,17 +71,10 @@ fiddler没有手机客户端，都是安装在PC上，要实现对手机上的�
 	"code":0
 }
 ```
-**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。**
 
-AREASTR //抓包JSON中的"areaStr"，删去转义符‘\’，如
+接下来你需要把上面获取到的JSON字段依次设为Secert
 
-```
-{"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
-```
-
-接下来你需要把上面获取到的JSON依次设为Secert
-
-在Settings添加以下Secert字段
+在Fork项目的Settings添加以下Secert字段
 
 DEPTID //抓包JSON中的"classid"，如`70376`
 
@@ -100,6 +93,13 @@ SCKEY //Server酱调用完整URL，使用前请注册并绑定[Server酱](http:/
 Settings->Action->I understand... 
 
 回到项目主页，修改README.md随便加几个空格即可触发Actions，设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
+
+
+**注意：本项目默认AERASTR为河南工业大学，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。如**
+
+```
+{"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
+```
 
 ## 友情链接
 https://github.com/ReaJason/17wanxiaoCheckin-Actions
