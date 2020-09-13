@@ -29,7 +29,7 @@ Name:`DEPTID` Value:`班级ID `
 
 请在本项目[response.json](https://github.com/chillsoul/EzCheckInSchool/blob/master/response.json)中按Ctrl+F查询，如`计科F1901`的`DEPTID`为`227457`
 
-**重复班级请根据`parentId`和`打卡页面个人信息`判断属于什么专业**
+**重复班级请根据`parentId`和`打卡页面个人信息`判断属于什么学院、专业**
 
 Name:`DEPTTEXT` Value:`学院班级专业` 健康打卡界面个人信息下方 如`理学院-应用物理学-应物1901`
 
