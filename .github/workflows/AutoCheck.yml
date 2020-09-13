@@ -29,10 +29,7 @@ jobs:
     - name: AutoCheck
       run: |
         python3 main.py <<EOF
-        ${{secrets.DEPTID}}
-        ${{secrets.DEPTTEXT}}
         ${{secrets.STUNO}}
         ${{secrets.USERNAME}}
-        ${{secrets.USERID}}
         ${{secrets.SCKEY}}
         EOF

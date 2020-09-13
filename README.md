@@ -1,6 +1,7 @@
 # EzCheckInSchool
-完美校园自动健康打卡，基于Github Actions免服务器运行。
+最简单的完美校园自动健康打卡，基于Github Actions免服务器运行。
 
+- 仅需学号姓名🎫
 - 随机校内经纬度🗺️
 - 打卡结果微信推送💬
 - 随机温度(36.2℃-36.4℃)🌡
@@ -12,99 +13,36 @@
 **首次开启若不在打卡时间将会重打早间卡作为测试**
 
 ## 更新日志
+2020.9.13 20:45 更新最简单免抓包使用方法及代码
+
 2020.9.12 7:00 修复时间判断代码，现在将正常打卡三次
 
 ## 使用方法
-首先，点击右上角Star并Fork，
+首先，点击右上角Star并Fork
 
-接下来抓包完美校园打卡内容，本文使用Fiddler代理手机抓包
+接下来你需要把学号和姓名设为Secert
 
-fiddler没有手机客户端，都是安装在PC上，要实现对手机上的程序抓包，则需要对PC上的fiddler和手机端做一些配置。
+你Fork的项目->Settings->Secert->New Secert
 
-首先对PC端fiddler配置如下图：
+Name:STUNO Value:你的学号 如`201812340101`
 
-![https设置](./img/https.png)
+Name:USERNAME Value:你的姓名 如`张三`
 
-![connections设置](./img/connections.png)
+Name:SCKEY Value:Server酱调用URL 使用前请绑定[Server酱](http://sc.ftqq.com/)，如` http://sc.ftqq.com/abcdefghigklmnopqrstuvwxyz.send`
 
-![fliters设置](./img/fliters.png)
+以上步骤完成后
 
-设置完fliters后点击右侧Actions->Run Fliterset now
+Settings->Action->I understand... 开启Actions
 
-然后打开手机，连接到电脑同一Wifi下设置代理
+回到项目主页，修改README.md 随便加几个空格即可
 
-![代理设置](./img/setproxy.png)
+设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
-此处的主机名可鼠标悬浮于Fiddler右上角Online图标查看
-
-![代理地址](./img/localip.png)
-
-设置好代理后，使用手机浏览器打开上图中主机名+端口号，本例为192.168.1.100:8888（如果无法访问请把360之类的关掉）
-
-![fiddler证书](./img/fiddlercert.png)
-
-点击FiddlerRoot certificate下载证书，下载完成后点击安装。
-
-之后打开完美校园->健康打卡抓包
-
-**由于证书的原因，如果不显示打卡界面需要多尝试打开几次**
-
-目标数据包为POST到`https://reportedh5.17wanxiao.com/api/clock/school/getUserInfo`的JSON
-
-格式如下：
-
-```
-{
-	"result":true,
-	"msg":"成功",
-	"userInfo":{
-		"classDescription":"信息科学与工程学院-计算机科学与技术-计科xxxx",
-		"classId":70376,
-		"collegeId":70332,
-		"customerAppTypeId":180,
-		"customerId":43,
-		"feature":1,
-		"majorId":71854,
-		"stuNo":"201812340101",
-		"userId":9632010,
-		"username":"张三"
-	},
-	"code":0
-}
-```
-
-接下来你需要把上面获取到的JSON字段依次设为Secert
-
-在Fork项目的Settings添加以下Secert字段
-
-DEPTID //抓包JSON中的"classid"，如`70376`
-
-DEPTTEXT //抓包JSON中的"classDescription"，如`信息科学与工程学院-计算机科学与技术-计科xxxx班`
-
-STUNO //抓包JSON中的"stuNo"，如`201812340101`
-
-USERID //抓包JSON中的"userid"，如`9632010`
-
-USERNAME //抓包JSON中的"username"，如`张三`
-
-SCKEY //Server酱调用完整URL，使用前请注册并绑定[Server酱](http://sc.ftqq.com/)，如` http://sc.ftqq.com/abcdefghigklmnopqrstuvwxyz.send`
-
-以上步骤都完成后开启Actions
-
-Settings->Action->I understand... 
-
-回到项目主页，修改README.md随便加几个空格即可触发Actions，设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
-
-
-**注意：本项目默认定位地址为河南工业大学莲花街校区内，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON中的areaStr）修改main.py代码。如**
-
-```
-{"streetNumber":"","street":"x街","district":"x区","city":"x市","province":"x省","town":"","pois":"xxxx","lng":xxx,"lat":xxx,"address":"x区x街x城","text":"x省-x市","code":""}
-```
+**注意：本项目默认学校为河南工业大学，其他学校请自行抓打卡提交的包（POST `https://reportedh5.17wanxiao.com/sass/api/epmpics` JSON）修改main.py代码。**
 
 ## 友情链接
 
-https://github.com/YooKing/HAUT_autoCheck
+https://github.com/YooKing/HAUT_autoCheck - 初版Python代码参考
 
-https://github.com/LovelyWhite/Haut-AutoCheckin
+https://github.com/LovelyWhite/Haut-AutoCheckin - iPhone捷径版
 

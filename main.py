@@ -5,11 +5,9 @@ import random
 import datetime
 
 # sectets字段录入
-deptId = input()
-deptText = input()
+
 stuNo = input()
 username = input()
-userid = input()
 sckey = input()
 
 # 时间判断
@@ -39,18 +37,18 @@ jsons = {
     "method": "submitUpInfoSchool",
     "jsonData": {
         "deptStr": {
-            "deptid": deptId,
-            "text": deptText
+            "deptid": round(time.time() * 10),
+            "text": round(time.time() * 20)
         },
         "areaStr": {"streetNumber":"","street":"长椿路辅路","district":"中原区","city":"郑州市","province":"河南省","town":"","pois":"河南工业大学(莲花街校区)","lng":113.544407 + random.random()/10000,"lat":34.831014 + random.random()/10000,"address":"中原区长椿路辅路河南工业大学(莲花街校区)","text":"河南省-郑州市","code":""},
-        "reportdate": round(time.time() * 1000),
+        "reportdate": round(time.time() * 30),
         "customerid": 43,
-        "deptid": deptId,
+        "deptid": round(time.time() * 40),
         "source": "app",
         "templateid": templateid,
         "stuNo": stuNo,
         "username": username,
-        "userid": userid,
+        "userid": round(time.time() * 50),
         "updatainfo": [
             {
                 "propertyname": "temperature",
@@ -65,9 +63,8 @@ jsons = {
         "clockState": 0
     },
 }
+
 # 提交打卡与结果判定
-
-
 for i in range(1,3):
     response = requests.post(sign_url, json=jsons)
     utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
@@ -82,8 +79,8 @@ if response.json()["msg"] == '成功':
 else:
     msg = cstTime + "打卡异常"
 print(msg)
-# 微信通知
 
+# 微信通知
 title = msg
 result = json.dumps(response.json(), sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False)
 content = f"""
