@@ -30,6 +30,7 @@ jobs:
       run: |
         python3 main.py <<EOF
         ${{secrets.DEPTID}}
+        ${{secrets.DEPTTEXT}}
         ${{secrets.STUNO}}
         ${{secrets.USERNAME}}
         ${{secrets.SCKEY}}

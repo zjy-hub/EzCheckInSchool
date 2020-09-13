@@ -6,6 +6,7 @@ import datetime
 
 # sectets字段录入
 deptid = input()
+depttext = input()
 stuNo = input()
 username = input()
 sckey = input()
@@ -38,7 +39,7 @@ jsons = {
     "jsonData": {
         "deptStr": {
             "deptid": deptid,
-            "text": round(time.time() * 20)
+            "text": depttext
         },
         "areaStr": {"streetNumber":"","street":"长椿路辅路","district":"中原区","city":"郑州市","province":"河南省","town":"","pois":"河南工业大学(莲花街校区)","lng":113.544407 + random.random()/10000,"lat":34.831014 + random.random()/10000,"address":"中原区长椿路辅路河南工业大学(莲花街校区)","text":"河南省-郑州市","code":""},
         "reportdate": round(time.time() * 1000),
@@ -48,7 +49,7 @@ jsons = {
         "templateid": templateid,
         "stuNo": stuNo,
         "username": username,
-        "userid": round(time.time() * 50),
+        "userid": round(time.time() * 10),
         "updatainfo": [
             {
                 "propertyname": "temperature",
