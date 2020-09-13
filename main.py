@@ -65,19 +65,25 @@ jsons = {
 }
 
 # 提交打卡与结果判定
-for i in range(1,3):
+flag = 0
+for i in range(1,5):
     response = requests.post(sign_url, json=jsons)
     utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
     cstTime = utcTime.strftime("%H时%M分%S秒")
     if response.status_code == 200:
+        flag=1
         break
     else:
         time.sleep(60)
 print(response.text)
-if response.json()["msg"] == '成功':
-    msg = cstTime + "打卡成功"
+if flag == 1:
+    if response.json()["msg"] == '成功':
+        msg = cstTime + "打卡成功"
+    else:
+        msg = cstTime + "打卡异常"
 else:
-    msg = cstTime + "打卡异常"
+    msg = cstTime + "网络错误打卡失败"
+
 print(msg)
 
 # 微信通知
