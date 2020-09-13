@@ -23,11 +23,11 @@
 
 接下来你需要把学号和姓名设为`Secert` 
 
-你Fork的项目->Settings->Secert->New Secert
+[你Fork的项目](/)->[Settings](/settings)->[Secert](/settings/secrets)->[New Secert](/settings/secrets/new)
 
 Name:`DEPTID` Value:`班级ID ` 
 
-请在本项目`response.json`中按Ctrl+F查询，如`计科F1901`的`DEPTID`为`227457`
+请在本项目[response.json](https://github.com/chillsoul/EzCheckInSchool/blob/master/response.json)中按Ctrl+F查询，如`计科F1901`的`DEPTID`为`227457`
 
 **重复班级请根据`parentId`和`打卡页面个人信息`判断属于什么专业**
 
@@ -41,7 +41,7 @@ Name:`SCKEY` Value:`Server酱调用URL` 使用前请绑定[Server酱](http://sc.
 
 Settings->Action->I understand... 开启Actions
 
-回到项目主页，修改README.md随便加几个空格即可
+回到项目主页，修改[README.md](/blob/master/README.md)随便加几个空格即可
 
 设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
