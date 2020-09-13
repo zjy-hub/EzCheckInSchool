@@ -51,7 +51,7 @@ Settings->Action->I understand... 开启Actions
 
 ## 友情链接
 
-https://github.com/YooKing/HAUT_autoCheck - 初版Python代码参考
+https://github.com/YooKing/HAUT_autoCheck - 校外版Python代码参考
 
 https://github.com/LovelyWhite/Haut-AutoCheckin - iPhone捷径版
 
