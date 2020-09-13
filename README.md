@@ -23,7 +23,7 @@
 
 接下来你需要把学号和姓名设为`Secert` 
 
-[你Fork的项目](./)->[Settings](./settings)->[Secert](./settings/secrets)->[New Secert](./settings/secrets/new)
+你Fork的项目->Settings->Secert->New Secert
 
 Name:`DEPTID` Value:`班级ID ` 
 
@@ -41,7 +41,7 @@ Name:`SCKEY` Value:`Server酱调用URL` 使用前请绑定[Server酱](http://sc.
 
 Settings->Action->I understand... 开启Actions
 
-回到项目主页，修改[README.md](./blob/master/README.md)随便加几个空格即可
+回到项目主页，修改[README.md](/README.md)随便加几个空格即可
 
 设置完成打卡后打卡时间内会每天自动打卡三次，第一次使用请观察效果。
 
