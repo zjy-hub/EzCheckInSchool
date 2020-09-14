@@ -53,9 +53,7 @@ Fork的项目->Settings->Action->I understand... 开启Actions
 
 ### 捐赠
 最后，如果觉得这个项目对你有帮助的话
-<center>
-<img src="./donate.png" width = "50%" height = "50%" alt="捐赠"/>
-</center>
+<img src="./donate.png" width = "30%" height = "30%" alt="捐赠"/>
 ## 友情链接
 
 https://github.com/YooKing/HAUT_autoCheck - 学习Python语法参考
