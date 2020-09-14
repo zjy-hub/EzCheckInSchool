@@ -119,6 +119,7 @@ def main():
         else:
             print('第{0}次打卡失败!'.format(i))
             time.sleep(60)
+    print(response.text)
     time_msg = str(time_h) + '时' + str(time_m) + '分' + str(time_s) + '秒'
     if flag == 1:
         if response.json()["msg"] == '成功':
