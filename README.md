@@ -21,7 +21,7 @@
 ## 使用方法
 首先，点击页面上方`Star`并`Fork`，此时你将得到复制的项目
 
-使用Github登入并微信绑定[Server酱](http://sc.ftqq.com/)以便可以收到结果推送
+使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
 
 接下来你需要设置`Secert` Fork的项目->Settings->Secert->New Secert
 
