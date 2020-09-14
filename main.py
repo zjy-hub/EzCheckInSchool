@@ -44,10 +44,11 @@ def main():
             if (class_['name'] == class_name) & (class_['parentId'] == major_id):
                 class_id = class_['deptId']
         if class_id:
-            print('获取deptId成功...')
+            print('获取deptId成功!')
     except NameError:
         print_info_error()
         exit(1)
+
     # 时间判断 Github Actions采用国际标准时
     time_h = (time.localtime().tm_hour + 8) % 24
     time_m = time.localtime().tm_min
@@ -116,8 +117,8 @@ def main():
             flag = 1
             break
         else:
+            print('第{0}次打卡失败!'.format(i))
             time.sleep(60)
-    print(response.text)
     time_msg = str(time_h) + '时' + str(time_m) + '分' + str(time_s) + '秒'
     if flag == 1:
         if response.json()["msg"] == '成功':
