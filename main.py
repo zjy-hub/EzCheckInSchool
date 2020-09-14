@@ -33,6 +33,7 @@ def main():
 
     # 获取deptId
     try:
+        print('获取deptId中...')
         for college in college_all:
             if college['name'] == college_name:
                 college_id = college['deptId']
@@ -42,6 +43,8 @@ def main():
         for class_ in class_all:
             if (class_['name'] == class_name) & (class_['parentId'] == major_id):
                 class_id = class_['deptId']
+        if class_id:
+            print('获取deptId成功...')
     except NameError:
         print_info_error()
         exit(1)
@@ -107,6 +110,7 @@ def main():
     # 提交打卡与结果判定
     flag = 0
     for i in range(1, 5):
+        print('第{0}次尝试打卡中...'.i)
         response = requests.post(check_url, json=check_json)
         if response.status_code == 200:
             flag = 1
@@ -138,7 +142,11 @@ def main():
         "text": title,
         "desp": content
     }
-    requests.post(sc_url, data=data)
+    response = requests.post(sc_url, data=data)
+    if response.status_code == 200:
+        print('Server酱推送成功!')
+    else:
+        print('Server酱推送失败!')
 
 
 def print_info_error():
