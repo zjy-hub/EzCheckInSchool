@@ -110,7 +110,7 @@ def main():
     # 提交打卡与结果判定
     flag = 0
     for i in range(1, 5):
-        print('第{0}次尝试打卡中...'.i)
+        print('第{0}次尝试打卡中...'.format(i))
         response = requests.post(check_url, json=check_json)
         if response.status_code == 200:
             flag = 1
