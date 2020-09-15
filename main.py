@@ -49,8 +49,7 @@ def main():
         print_info_error()
         exit(1)
     # 时间判断 Github Actions采用国际标准时
-    hms = []
-    update_time(hms)
+    hms = update_time()
     if (hms[0] >= 6) & (hms[0] < 8):
         template_id = "clockSign1"
         customer_app_type_rule_id = 146
@@ -109,7 +108,7 @@ def main():
     # 提交打卡与结果判定
     flag = 0
     for i in range(1, 10):
-        update_time(hms)
+        hms = update_time()
         response = requests.post(check_url, json=check_json)
         if response.status_code == 200:
             flag = 1
@@ -154,7 +153,7 @@ def print_info_error():
 
 
 def update_time(hms):
-    hms = [time.localtime().tm_hour + 8 % 24,
+    return [time.localtime().tm_hour + 8 % 24,
             time.localtime().tm_min,
             time.localtime().tm_sec]
 
