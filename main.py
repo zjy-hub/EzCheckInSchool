@@ -156,7 +156,7 @@ def print_info_error():
 def update_time(hms):
     hms = [time.localtime().tm_hour + 8 % 24,
             time.localtime().tm_min,
-            time.localtime().tm_ses]
+            time.localtime().tm_sec]
 
 
 if __name__ == '__main__':
