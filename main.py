@@ -60,7 +60,7 @@ def main():
         template_id = "clockSign3"
         customer_app_type_rule_id = 148
     else:
-        print("现在是%d点%d分，将打卡早间档测试" % (time_h, time_m))
+        print("现在是%d点%d分，将打卡早间档测试" % (hms[0], hms[1]))
         template_id = "clockSign1"
         customer_app_type_rule_id = 146
 
