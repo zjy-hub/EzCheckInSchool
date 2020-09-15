@@ -153,7 +153,7 @@ def print_info_error():
 
 
 def update_time():
-    return [time.localtime().tm_hour + 8 % 24,
+    return [(time.localtime().tm_hour + 8) % 24,
             time.localtime().tm_min,
             time.localtime().tm_sec]
 
