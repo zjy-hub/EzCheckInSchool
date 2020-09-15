@@ -152,7 +152,7 @@ def print_info_error():
     print('如 理学院-应用物理学-应物1901')
 
 
-def update_time(hms):
+def update_time():
     return [time.localtime().tm_hour + 8 % 24,
             time.localtime().tm_min,
             time.localtime().tm_sec]
