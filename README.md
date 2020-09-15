@@ -64,7 +64,7 @@ Fork的项目->Settings->Action->I understand... 开启Actions
 ### 捐赠
 最后，如果觉得这个项目对你有帮助的话
 
-![Donate](https://s1.ax1x.com/2020/09/15/wcChD0.png)
+![Donate](https://s1.ax1x.com/2020/09/15/wcPp5D.png)
 
 ## 友情链接
 
