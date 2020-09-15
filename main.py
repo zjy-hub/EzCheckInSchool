@@ -158,5 +158,6 @@ def update_time(hms):
             time.localtime().tm_min,
             time.localtime().tm_ses]
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
