@@ -33,33 +33,31 @@ def main():
 
     # 获取deptId
     try:
-        print('获取deptId中...')
         for college in college_all:
             if college['name'] == college_name:
                 college_id = college['deptId']
+                break
         for major in major_all:
             if (major['name'] == major_name) & (major['parentId'] == college_id):
                 major_id = major['deptId']
+                break
         for class_ in class_all:
             if (class_['name'] == class_name) & (class_['parentId'] == major_id):
                 class_id = class_['deptId']
-        if class_id:
-            print('获取deptId成功!')
+                break
     except NameError:
         print_info_error()
         exit(1)
-
     # 时间判断 Github Actions采用国际标准时
-    time_h = (time.localtime().tm_hour + 8) % 24
-    time_m = time.localtime().tm_min
-    time_s = time.localtime().tm_sec
-    if (time_h >= 6) & (time_h < 8):
+    hms = []
+    update_time(hms)
+    if (hms[0] >= 6) & (hms[0] < 8):
         template_id = "clockSign1"
         customer_app_type_rule_id = 146
-    elif (time_h >= 12) & (time_h < 14):
+    elif (hms[0] >= 12) & (hms[0] < 14):
         template_id = "clockSign2"
         customer_app_type_rule_id = 147
-    elif (time_h >= 21) & (time_h <= 22):
+    elif (hms[0] >= 21) & (hms[0] <= 22):
         template_id = "clockSign3"
         customer_app_type_rule_id = 148
     else:
@@ -110,17 +108,16 @@ def main():
 
     # 提交打卡与结果判定
     flag = 0
-    for i in range(1, 5):
-        print('第{0}次尝试打卡中...'.format(i))
+    for i in range(1, 10):
+        update_time(hms)
         response = requests.post(check_url, json=check_json)
         if response.status_code == 200:
             flag = 1
             break
         else:
-            print('第{0}次打卡失败!'.format(i))
             time.sleep(60)
     print(response.text)
-    time_msg = str(time_h) + '时' + str(time_m) + '分' + str(time_s) + '秒'
+    time_msg = str(hms[0]) + '时' + str(hms[1]) + '分' + str(hms[0]) + '秒'
     if flag == 1:
         if response.json()["msg"] == '成功':
             msg = time_msg + '时' + "打卡成功"
@@ -144,11 +141,7 @@ def main():
         "text": title,
         "desp": content
     }
-    response = requests.post(sc_url, data=data)
-    if response.status_code == 200:
-        print('Server酱推送成功!')
-    else:
-        print('Server酱推送失败!')
+    requests.post(sc_url, data=data)
 
 
 def print_info_error():
@@ -160,5 +153,10 @@ def print_info_error():
     print('如 理学院-应用物理学-应物1901')
 
 
-if __name__ == '__main__':
-    main()
+def update_time(hms):
+    hms = [time.localtime().tm_hour + 8 % 24,
+            time.localtime().tm_min,
+            time.localtime().tm_ses]
+
+    if __name__ == '__main__':
+        main()
