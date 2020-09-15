@@ -22,7 +22,11 @@
 2020.9.12 7:00 修复时间判断代码，现在将正常打卡三次
 
 ## 使用方法
-首先，点击页面上方`Star`并`Fork`，此时你将得到复制的项目
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+首先，点击上方`Star`和`Fork`，此时你将得到复制的项目
 
 使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
 
