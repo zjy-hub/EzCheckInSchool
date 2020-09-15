@@ -23,11 +23,7 @@
 
 ## 使用方法
 
-<a class="github-button" href="https://github.com/chillsoul/EzCheckInSchool" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star chillsoul/EzCheckInSchool on GitHub">Star</a>
-
-<a class="github-button" href="https://github.com/chillsoul/EzCheckInSchool/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork chillsoul/EzCheckInSchool on GitHub">Fork</a>
-
-首先，点击上方`Star`和`Fork`，此时你将得到复制的项目
+首先，点击页面上方`Star`和`Fork`，此时你将得到复制的项目
 
 使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
 
