@@ -25,17 +25,17 @@
 
 首先，点击页面上方`Star`和`Fork`，此时你将得到复制的项目
 
-![Star and fork](./img/starandfork.png)
+![Star and fork](https://s1.ax1x.com/2020/09/15/wcCfuq.png)
 
 使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
 
 接下来你需要设置`Secret` Fork的项目->Settings->Secret->New Secret
 
-![New Secert](./img/newsecret.png)
+![New Secert](https://s1.ax1x.com/2020/09/15/wcC2gs.png)
 
 打开完美校园健康打卡，参照打卡页面上方个人信息及如下表格设置
 
-![Add Secert](./img/addsecret.png)
+![Add Secert](https://s1.ax1x.com/2020/09/15/wcCRvn.png)
 
 |Name|Value|示例|
 | :-----| :---- | :---- |
@@ -64,7 +64,7 @@ Fork的项目->Settings->Action->I understand... 开启Actions
 ### 捐赠
 最后，如果觉得这个项目对你有帮助的话
 
-<img src="./img/donate.png" width = "35%" height = "45%" alt="捐赠"/>
+![Donate](https://s1.ax1x.com/2020/09/15/wcChD0.png)
 
 ## 友情链接
 
