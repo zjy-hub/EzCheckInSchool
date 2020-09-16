@@ -161,8 +161,9 @@ def check_in(stu_name, stu_id, dept_text, customer_app_type_rule_id):
     return response.text
 
 
-def sc_push(sc_url, title, response):
+def sc_push(sc_key, title, response):
     # 微信通知
+    sc_url = 'https://sc.ftqq.com/' + sc_key + '.send'
     content = f"""
     
 ```
