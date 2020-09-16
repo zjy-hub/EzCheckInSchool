@@ -53,7 +53,7 @@
 
 以上步骤完成后
 
-Fork的项目->Settings->Action->I understand... 开启Actions
+Fork的项目->Action->I understand... 开启Actions
 
 回到项目主页，修改[README.md](/README.md)随便加几个空格即可
 
