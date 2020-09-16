@@ -171,11 +171,11 @@ def wx_push(wx_uid, title, response):
 ```
 {response}
 ```
-###😀[记得Star此项目](github.com/chillsoul/EzCheckInSchool)
-### 😢[反馈](github.com/chillsoul/EzCheckInSchool/issue)
-### 💴扫码捐赠一杯咖啡
 
+### 💴扫码捐赠一杯咖啡
 <center><img src="https://s1.ax1x.com/2020/09/16/w25Jxg.png"/></center>
+### 😢[反馈](github.com/chillsoul/EzCheckInSchool/issue)
+### 😀[记得Star此项目](github.com/chillsoul/EzCheckInSchool)
         """
     data = {
         "appToken": "AT_bVK4MZob9c9acNmLbWHN6RjQxeGllOOB",
