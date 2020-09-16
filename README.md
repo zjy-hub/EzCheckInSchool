@@ -15,6 +15,8 @@
 
 部分老版本可能存在打卡失败 Gateway timeout 504错误，建议更新新版本。
 
+2020.9.16 21:35 代码重构，更新多用户版
+
 2020.9.14 12:40 使用方法再次优化
 
 2020.9.13 20:45 更新免抓包方式及使用方法
@@ -37,11 +39,13 @@
 
 ![Add Secert](https://s1.ax1x.com/2020/09/15/wcCRvn.png)
 
+给几个人打就用英文逗号分开填写几个
+
 |Name|Value|示例|
 | :-----| :---- | :---- |
-|`DEPT_TEXT`|`学院-专业-班级`|`理学院-应用物理学-应物1901`|
-|`STU_ID`|`你的学号`|`201912340101`|
-|`STU_NAME`|`你的姓名`|`李华`|
+|`DEPT_TEXT`|`学院-专业-班级1,2,...`|`理学院-应用物理学-应物1901,理学院-应用物理学-应物1902`|
+|`STU_ID`|`学号1,2,...`|`201912340101,201912340201`|
+|`STU_NAME`|`姓名1,2,...`|`小明,小华`|
 |`SC_URL`|[`Server酱调用URL`](http://sc.ftqq.com/?c=code)|`http://sc.ftqq.com/abcdefghigklmnopqrstuvwxyz.send`| 
 
 以上步骤完成后
@@ -71,4 +75,6 @@ Fork的项目->Settings->Action->I understand... 开启Actions
 https://github.com/YooKing/HAUT_autoCheck - 学习Python语法参考
 
 https://github.com/LovelyWhite/Haut-AutoCheckin - iOS捷径版
+
+https://github.com/themanforfree/EzCheckInSchool-MultiUser - 多用户想法
 
