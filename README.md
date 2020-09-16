@@ -30,7 +30,13 @@
 
 ![Star and fork](https://s1.ax1x.com/2020/09/16/w22nDx.png)
 
-使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
+微信扫码关注，以便获取打卡结果推送
+
+![Wechat QRCode](http://wxpusher.zjiecode.com/api/qrcode/FHFBNBtuM9q4rmR2AS2okzHcBEoh9pFa1JsseEb0PXixltPGFh3UFaw0qwLH4sSJ.jpg)
+
+关注后点击我的->我的UID，获取你的UID
+
+![WxPusher UID](https://s1.ax1x.com/2020/09/16/w2W6H0.png)
 
 接下来你需要设置`Secret` Fork的项目->Settings->Secret->New Secret
 
@@ -47,7 +53,7 @@
 |`DEPT_TEXT`|`学院-专业-班级1,2,...`|`理学院-应用物理学-应物1901,理学院-应用物理学-应物1902`|
 |`STU_ID`|`学号1,2,...`|`201912340101,201912340201`|
 |`STU_NAME`|`姓名1,2,...`|`小明,小华`|
-|`SC_KEY`|[`Server酱调用代码`](http://sc.ftqq.com/?c=code)|`SCUabcdefghigklmnopqrstuvwxyz`| 
+|`WX_UID`|`WxPusher UID1,2,...`|`UID_abcdefghijklm,UID_nopqrstuvwxyz`| 
 
 以上步骤完成后
 
