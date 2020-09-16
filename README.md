@@ -30,9 +30,9 @@
 
 ![Star and fork](https://s1.ax1x.com/2020/09/16/w22nDx.png)
 
-微信扫码关注，以便获取打卡结果推送
+点击下方链接微信扫码关注，以便获取打卡结果推送
 
-![Wechat QRCode](http://wxpusher.zjiecode.com/api/qrcode/FHFBNBtuM9q4rmR2AS2okzHcBEoh9pFa1JsseEb0PXixltPGFh3UFaw0qwLH4sSJ.jpg)
+[Wechat QRCode](http://wxpusher.zjiecode.com/api/qrcode/FHFBNBtuM9q4rmR2AS2okzHcBEoh9pFa1JsseEb0PXixltPGFh3UFaw0qwLH4sSJ.jpg)
 
 关注后点击我的->我的UID，获取你的UID
 
