@@ -88,6 +88,8 @@ def get_class_id(dept_text):
             if (class_['name'] == class_name) & (class_['parentId'] == major_id):
                 class_id = class_['deptId']
                 break
+        if class_id:
+            print()
     except NameError:
         print_info_error()
         exit(1)
