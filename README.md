@@ -28,7 +28,7 @@
 
 首先，点击页面上方`Star`和`Fork`，此时你将得到复制的项目
 
-![Star and fork](https://s1.ax1x.com/2020/09/15/wcC2gs.png)
+![Star and fork](https://s1.ax1x.com/2020/09/16/w22nDx.png)
 
 使用Github登入[Server酱](http://sc.ftqq.com/)并微信绑定以便可以收到结果推送
 
