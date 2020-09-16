@@ -183,7 +183,6 @@ def wx_push(wx_uid, title, response):
         "uids": [wx_uid]
     }
     response = requests.post(wx_pusher_url, json=data)
-    print(1)
 
 
 if __name__ == '__main__':
