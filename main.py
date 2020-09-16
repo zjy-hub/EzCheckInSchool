@@ -40,10 +40,10 @@ def main():
                             dept_text[index],
                             customer_app_type_rule_id)
         if '成功' in response:
-            title = time_msg + '打卡成功'
+            title = value[-4:] + ' ' + time_msg + '打卡成功'
         else:
-            title = time_msg + '打卡失败，请手动补卡'
-        print(value[-4:] + ' ' + title)
+            title = value[-4:] + ' ' + time_msg + '打卡失败，请手动补卡'
+        print(title)
         wx_push(wx_uid[index], title, response)
         hms = update_time()
 
