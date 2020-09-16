@@ -34,7 +34,7 @@
 
 接下来你需要设置`Secret` Fork的项目->Settings->Secret->New Secret
 
-![New Secert](https://s1.ax1x.com/2020/09/15/wcCfuq.png)
+![New Secert](https://s1.ax1x.com/2020/09/16/w2gGn0.png)
 
 打开完美校园健康打卡，参照打卡页面上方个人信息及如下表格设置
 
