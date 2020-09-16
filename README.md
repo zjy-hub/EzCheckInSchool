@@ -46,7 +46,7 @@
 |`DEPT_TEXT`|`学院-专业-班级1,2,...`|`理学院-应用物理学-应物1901,理学院-应用物理学-应物1902`|
 |`STU_ID`|`学号1,2,...`|`201912340101,201912340201`|
 |`STU_NAME`|`姓名1,2,...`|`小明,小华`|
-|`SC_URL`|[`Server酱调用URL`](http://sc.ftqq.com/?c=code)|`http://sc.ftqq.com/abcdefghigklmnopqrstuvwxyz.send`| 
+|`SC_KEY`|[`Server酱调用代码`](http://sc.ftqq.com/?c=code)|`SCUabcdefghigklmnopqrstuvwxyz`| 
 
 以上步骤完成后
 
