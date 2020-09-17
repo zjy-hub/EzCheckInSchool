@@ -15,7 +15,6 @@ def main():
     """
     主函数
     """
-    user = []
     user_name = []
     user_id = []
     dept_text = []
