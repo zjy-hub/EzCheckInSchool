@@ -36,12 +36,16 @@
 
 接下来你需要设置`Secret` Fork的项目->Settings->Secret->New Secret
 
-![New Secert](https://s1.ax1x.com/2020/09/16/w27Awd.png)
+![New Secert](https://s1.ax1x.com/2020/09/17/wR4IOJ.png)
 
 打开完美校园健康打卡，参照打卡页面上方个人信息及如下表格设置
 
 
 **每人一行，全部输入完后以end结尾**
+
+|Name|Value|
+| :-----| :-----|
+|`USER_IN`|`姓名,学号,学院-专业-班级,WxPusher UID`<br/>`......`<br/>`end`|
 
 每行信息按顺序如下，以英文逗号隔开
 
@@ -54,22 +58,11 @@
 
 以上信息应添加的Secert为
 
-Name:`USER_IN`
-
-Value:
-```
-小明,201912340101,理学院-应用物理学-应物1901,UID_abcdefghijklm
-end
-```
+![Single User](https://s1.ax1x.com/2020/09/17/wR4Tm9.png)
 
 若有多人需要打卡，
 
-Value:
-```
-小明,201912340101,理学院-应用物理学-应物1901,UID_abcdefghijklm
-小华,201912340102,理学院-应用物理学-应物1901,UID_hijklmnopqrst
-end
-```
+![Multi User](https://s1.ax1x.com/2020/09/17/wR45y4.png)
 
 以上步骤完成后
 
