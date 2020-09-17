@@ -30,7 +30,7 @@
 
 [Wechat QRCode](http://wxpusher.zjiecode.com/api/qrcode/FHFBNBtuM9q4rmR2AS2okzHcBEoh9pFa1JsseEb0PXixltPGFh3UFaw0qwLH4sSJ.jpg)
 
-关注后点击我的->我的UID，获取你的UID
+关注后点击我的->我的UID，获取每个人的WxPusher UID
 
 ![WxPusher UID](https://s1.ax1x.com/2020/09/16/w2W6H0.png)
 
@@ -40,16 +40,36 @@
 
 打开完美校园健康打卡，参照打卡页面上方个人信息及如下表格设置
 
-![Add Secert](https://s1.ax1x.com/2020/09/15/wcCRvn.png)
 
-给几个人打就用英文逗号分开填写几个
+**每人一行，全部输入完后以end结尾**
 
-|Name|Value|示例|
+每行信息按顺序如下，以英文逗号隔开
+
+|No|Type|Example|
 | :-----| :---- | :---- |
-|`DEPT_TEXT`|`学院-专业-班级1,2,...`|`理学院-应用物理学-应物1901,理学院-应用物理学-应物1902`|
-|`STU_ID`|`学号1,2,...`|`201912340101,201912340201`|
-|`STU_NAME`|`姓名1,2,...`|`小明,小华`|
-|`WX_UID`|`WxPusher UID1,2,...`|`UID_abcdefghijklm,UID_nopqrstuvwxyz`| 
+|1|`姓名`|`小明`|
+|2|`学号`|`201912340101`|
+|3|`学院-专业-班级`|`理学院-应用物理学-应物1901`|
+|4|`WxPusher UID`|`UID_abcdefghijklm`| 
+
+以上信息应添加的Secert为
+
+Name:`USER_IN`
+
+Value:
+```
+小明,201912340101,理学院-应用物理学-应物1901,UID_abcdefghijklm
+end
+```
+
+若有多人需要打卡，
+
+Value:
+```
+小明,201912340101,理学院-应用物理学-应物1901,UID_abcdefghijklm
+小华,201912340102,理学院-应用物理学-应物1901,UID_hijklmnopqrst
+end
+```
 
 以上步骤完成后
 

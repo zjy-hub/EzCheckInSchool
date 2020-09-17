@@ -15,11 +15,20 @@ def main():
     """
     主函数
     """
+    user = []
+    user_name = []
+    user_id = []
+    dept_text = []
+    wx_uid = []
     # 输入Secrets
-    stu_name = input().split(',')
-    stu_id = input().split(',')
-    dept_text = input().split(',')
-    wx_uid = input().split(',')
+    user_in = input()
+    while user_in != 'end':
+        info = user_in.split(',')
+        user_name.append(info[0])
+        user_id.append(info[1])
+        dept_text.append(info[2])
+        wx_uid.append(info[3])
+        user_in = input()
 
     # 时间判断 Github Actions采用国际标准时
     hms = update_time()
@@ -33,16 +42,16 @@ def main():
         print('未到打卡时间，将重打早间卡测试')
         customer_app_type_rule_id = 146
 
-    for index, value in enumerate(stu_id):
+    for index, value in enumerate(user_id):
         time_msg = str(hms[0]) + '时' + str(hms[1]) + '分' + str(hms[2]) + '秒'
-        response = check_in(stu_name[index],
-                            stu_id[index],
+        response = check_in(user_name[index],
+                            user_id[index],
                             dept_text[index],
                             customer_app_type_rule_id)
         if '成功' in response:
-            title = value[-4:] + ' ' + time_msg + '打卡成功'
+            title = '尾号' + value[-4:] + ' ' + time_msg + '打卡成功'
         else:
-            title = value[-4:] + ' ' + time_msg + '打卡失败，请手动补卡'
+            title = '尾号' + value[-4:] + ' ' + time_msg + '打卡失败，请手动补卡'
         print(title)
         wx_push(wx_uid[index], title, response)
         hms = update_time()
