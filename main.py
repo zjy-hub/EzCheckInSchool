@@ -61,9 +61,10 @@ def print_info_error():
     """
     打印 个人信息错误
     """
-    print('请检查你填写的学院、专业、班级信息！')
-    print('见完美校园健康打卡页面')
-    print('如 理学院-应用物理学-应物1901')
+    print('请检查你填写的个人信息！')
+    print('如:')
+    print('小明,201912340101,理学院-应用物理学-应物1901,UID_abcdefghijklm')
+    print('end')
 
 
 def update_time():
